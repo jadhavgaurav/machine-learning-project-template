@@ -103,6 +103,29 @@ Boosting technique that builds trees sequentially.
 
 ---
 
+## 📌 XGBoost  
+An advanced gradient boosting model optimized for speed and performance.  
+### 🔧 **Hyperparameters & Default Values**  
+- `n_estimators`: Number of boosting rounds (`int`, default=`100`)  
+- `learning_rate` (`eta`): Shrinks feature weights to prevent overfitting (`float`, default=`0.3`)  
+- `max_depth`: Maximum depth of a tree (`int`, default=`6`)  
+- `min_child_weight`: Minimum sum of instance weight in a child node (`float`, default=`1`)  
+- `gamma`: Minimum loss reduction for a split (`float`, default=`0`)  
+- `subsample`: Fraction of data used for training each tree (`float`, default=`1.0`)  
+- `colsample_bytree`: Fraction of features used per tree (`float`, default=`1.0`)  
+- `colsample_bylevel`: Fraction of features used per split (`float`, default=`1.0`)  
+- `colsample_bynode`: Fraction of features used per node (`float`, default=`1.0`)  
+- `lambda`: L2 regularization (`float`, default=`1.0`)  
+- `alpha`: L1 regularization (`float`, default=`0.0`)  
+- `scale_pos_weight`: Balances positive & negative weights (`float`, default=`1.0`)  
+- `objective`: Learning task (`'reg:squarederror'` for regression, `'binary:logistic'` for binary classification, default=`'reg:squarederror'`)  
+- `booster`: Type of model (`'gbtree'`, `'gblinear'`, `'dart'`, default=`'gbtree'`)  
+- `tree_method`: Algorithm to construct trees (`'auto'`, `'exact'`, `'approx'`, `'hist'`, `'gpu_hist'`, default=`'auto'`)  
+- `eval_metric`: Evaluation metric (`'rmse'`, `'logloss'`, `'error'`, `'auc'`, default=`None`)  
+- `verbosity`: Logging level (`0`=Silent, `1`=Warning, `2`=Info, `3`=Debug, default=`1`)  
+
+---
+
 ## 📌 Hyperparameter Tuning with GridSearchCV  
 ### 📌 Sample Code  
 ```python
